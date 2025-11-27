@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Luismaperamato.com – En construcción</title>
+  <title>Luismaperamato.com – Herramientas para espectáculos</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
@@ -13,34 +13,167 @@
       font-family: 'Inter', sans-serif;
       background-color: #121212;
       color: #e0e0e0;
+    }
+
+    .page {
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      text-align: center;
+      padding: 2rem 1rem;
     }
 
     .container {
-      max-width: 600px;
+      width: 100%;
+      max-width: 900px;
       padding: 2rem;
       background-color: #1e1e1e;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
       border-radius: 12px;
     }
 
+    header {
+      margin-bottom: 2rem;
+    }
+
     h1 {
       font-size: 2.2rem;
-      margin-bottom: 1rem;
+      margin: 0 0 0.5rem;
+      color: #ffffff;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: #b0b0b0;
+      margin: 0 0 0.75rem;
+    }
+
+    .status {
+      font-size: 0.95rem;
+      color: #888;
+      margin: 0 0 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin: 0 0 1rem;
       color: #ffffff;
     }
 
     p {
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: #b0b0b0;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
     }
 
-    /* Minimal link button — clean and elegant */
+    .apps {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .app-card {
+      padding: 1.25rem 1.5rem;
+      border-radius: 10px;
+      background: #191919;
+      border: 1px solid #262626;
+    }
+
+    .app-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .app-name {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    .app-platforms {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      font-size: 0.8rem;
+    }
+
+    .badge {
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      background: #252525;
+      border: 1px solid #333;
+      color: #d0d0d0;
+      white-space: nowrap;
+    }
+
+    .badge-soon {
+      border-style: dashed;
+      color: #aaaaaa;
+    }
+
+    .app-description {
+      font-size: 0.95rem;
+      color: #c4c4c4;
+      margin-bottom: 0.75rem;
+    }
+
+    .app-meta {
+      font-size: 0.85rem;
+      color: #8a8a8a;
+      margin-bottom: 0.75rem;
+    }
+
+    .app-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.55rem 0.9rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: 1px solid #2a2a2a;
+      background: #1a1a1a;
+      color: #e0e0e0;
+      transition: border-color 0.15s ease, background 0.15s ease, transform 0.03s ease;
+    }
+
+    .btn-primary {
+      border-color: #3f51ff;
+    }
+
+    .btn:hover {
+      border-color: #3a3a3a;
+      background: #161616;
+    }
+
+    .btn-primary:hover {
+      border-color: #5b6bff;
+      background: #181a30;
+    }
+
+    .btn:active {
+      transform: translateY(1px);
+    }
+
+    .btn:focus-visible {
+      outline: 2px solid #5b86ff;
+      outline-offset: 3px;
+    }
+
+    .btn-disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
     .ext-link {
       display: inline-block;
       padding: 0.55rem 0.9rem;
@@ -50,37 +183,97 @@
       text-decoration: none;
       background: #1a1a1a;
       transition: border-color 0.15s ease, background 0.15s ease, transform 0.03s ease;
+      font-size: 0.9rem;
     }
+
     .ext-link:hover {
       border-color: #3a3a3a;
       background: #161616;
     }
+
     .ext-link:active {
       transform: translateY(1px);
     }
+
     .ext-link:focus-visible {
-      outline: 2px solid #5b86ff; /* Accessible focus */
+      outline: 2px solid #5b86ff;
       outline-offset: 3px;
     }
 
     .footer {
       margin-top: 2rem;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: #555;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 1.5rem;
+      }
+      .app-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Luismaperamato.com</h1>
-    <p>Esta web está en construcción.<br>. . .</p>
+  <div class="page">
+    <div class="container">
+      <header>
+        <h1>Luismaperamato.com</h1>
+        <p class="subtitle">Iluminación, sonido y herramientas para espectáculos.</p>
+        <p class="status">La web está en construcción, pero ya puedes descargar algunos de mis programas.</p>
+      </header>
 
-    <!-- External profile link (opens in a new tab) -->
-    <a class="ext-link" href="https://github.com/PeramatoG" target="_blank" rel="noopener noreferrer">
-      Ver repositorios en GitHub (PeramatoG)
-    </a>
+      <section>
+        <h2>Software</h2>
+        <div class="apps">
+          <article class="app-card">
+            <div class="app-header">
+              <h3 class="app-name">Peramesa</h3>
+              <div class="app-platforms">
+                <span class="badge">macOS · Intel / Apple Silicon</span>
+                <span class="badge badge-soon">Windows · próximamente</span>
+              </div>
+            </div>
+            <p class="app-description">
+              Aplicación para controlar mesas digitales Yamaha compatibles con el protocolo TF
+              mediante cues, con soporte OSC y guardado/carga de shows en CSV.
+            </p>
+            <p class="app-meta">
+              Versión actual: 3.0.0 · Proyecto abierto en GitHub.
+            </p>
+            <div class="app-actions">
+              <!-- macOS download goes to the latest GitHub release -->
+              <a class="btn btn-primary" href="https://github.com/PeramatoG/Peramesa/releases/latest" target="_blank" rel="noopener noreferrer">
+                Descargar para macOS (GitHub)
+              </a>
+              <span class="btn btn-disabled" aria-disabled="true">
+                Instalador para Windows (próximamente)
+              </span>
+              <a class="btn" href="https://github.com/PeramatoG/Peramesa" target="_blank" rel="noopener noreferrer">
+                Ver código en GitHub
+              </a>
+            </div>
+          </article>
 
-    <div class="footer">© Luisma Peramato · 2025</div>
+          <!-- Cuando tengas más programas, puedes duplicar este bloque <article> y adaptarlo -->
+        </div>
+      </section>
+
+      <div class="footer">
+        <span>© Luisma Peramato · 2025</span>
+        <a class="ext-link" href="https://github.com/PeramatoG" target="_blank" rel="noopener noreferrer">
+          Ver repositorios en GitHub (PeramatoG)
+        </a>
+      </div>
+    </div>
   </div>
 </body>
 </html>
