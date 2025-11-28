@@ -36,6 +36,30 @@
       margin-bottom: 2rem;
     }
 
+    .language-switcher {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.85rem;
+      color: #b0b0b0;
+    }
+
+    .language-switcher select {
+      background-color: #1a1a1a;
+      border: 1px solid #3a3a3a;
+      border-radius: 6px;
+      padding: 0.25rem 0.5rem;
+      color: #e0e0e0;
+      font-size: 0.85rem;
+    }
+
+    .language-switcher select:focus-visible {
+      outline: 2px solid #5b86ff;
+      outline-offset: 2px;
+    }
+
     h1 {
       font-size: 2.2rem;
       margin: 0 0 0.5rem;
@@ -240,59 +264,251 @@
   <div class="page">
     <div class="container">
       <header>
-        <h1>Luismaperamato.com</h1>
-        <p class="subtitle">Iluminación, imagen y herramientas para espectáculos.</p>
-        <p class="status">La web está en construcción, pero ya puedes descargar algunos de mis programas.</p>
+        <div class="language-switcher">
+          <label for="language-switcher-select" class="language-label" data-i18n-key="languageLabel">
+            Idioma
+          </label>
+          <select
+            id="language-switcher-select"
+            aria-label="Selector de idioma"
+            data-i18n-attr="aria-label:languageSelectAria"
+          >
+            <option value="es">ES</option>
+            <option value="en">EN</option>
+          </select>
+        </div>
+
+        <h1 data-i18n-key="siteName">Luismaperamato.com</h1>
+        <p class="subtitle" data-i18n-key="subtitle">
+          Iluminación, imagen y herramientas para espectáculos.
+        </p>
+        <p class="status" data-i18n-key="status">
+          La web está en construcción, pero ya puedes descargar algunos de mis programas.
+        </p>
       </header>
 
       <section>
-        <h2>Software</h2>
+        <h2 data-i18n-key="sectionSoftware">Software</h2>
         <div class="apps">
           <article class="app-card">
             <div class="app-media">
-              <img src="assets/peramesa_screenshot.png"
-                   alt="Captura de Peramesa mostrando los faders y controles de cues"
-                   loading="lazy">
+              <img
+                src="assets/peramesa_screenshot.png"
+                alt="Captura de Peramesa mostrando los faders y controles de cues"
+                loading="lazy"
+                data-i18n-attr="alt:peramesaScreenshotAlt"
+              >
             </div>
             <div class="app-header">
-              <h3 class="app-name">Peramesa</h3>
+              <h3 class="app-name" data-i18n-key="appPeramesaName">Peramesa</h3>
               <div class="app-platforms">
-                <span class="badge">macOS · Intel / Apple Silicon</span>
-                <span class="badge badge-soon">Windows · próximamente</span>
+                <span class="badge" data-i18n-key="appPeramesaPlatformsMac">
+                  macOS · Intel / Apple Silicon
+                </span>
+                <span class="badge badge-soon" data-i18n-key="appPeramesaPlatformsWin">
+                  Windows · próximamente
+                </span>
               </div>
             </div>
-            <p class="app-description">
+            <p class="app-description" data-i18n-key="appPeramesaDescription">
               Aplicación para controlar mesas digitales Yamaha compatibles con el protocolo TF
               mediante cues, con soporte OSC y guardado/carga de shows en CSV.
             </p>
-            <p class="app-meta">
+            <p class="app-meta" data-i18n-key="appPeramesaMeta">
               Versión actual: 3.0.0 · Proyecto abierto en GitHub.
             </p>
             <div class="app-actions">
               <!-- macOS download goes to the latest GitHub release -->
-              <a class="btn btn-primary" href="https://github.com/PeramatoG/Peramesa/releases/latest" target="_blank" rel="noopener noreferrer">
+              <a
+                class="btn btn-primary"
+                href="https://github.com/PeramatoG/Peramesa/releases/latest"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n-key="appPeramesaDownloadMacBtn"
+              >
                 Descargar para macOS (GitHub)
               </a>
-              <span class="btn btn-disabled" aria-disabled="true">
+              <span
+                class="btn btn-disabled"
+                aria-disabled="true"
+                data-i18n-key="appPeramesaDownloadWinBtn"
+              >
                 Instalador para Windows (próximamente)
               </span>
-              <a class="btn" href="https://github.com/PeramatoG/Peramesa" target="_blank" rel="noopener noreferrer">
+              <a
+                class="btn"
+                href="https://github.com/PeramatoG/Peramesa"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n-key="appPeramesaViewCodeBtn"
+              >
                 Ver código en GitHub
               </a>
             </div>
           </article>
 
-          <!-- Cuando tengas más programas, puedes duplicar este bloque <article> y adaptarlo -->
+          <!-- Para más programas, duplica este <article> y añade nuevas claves de traducción -->
         </div>
       </section>
 
       <div class="footer">
-        <span>© Luisma Peramato · 2025</span>
-        <a class="ext-link" href="https://github.com/PeramatoG" target="_blank" rel="noopener noreferrer">
+        <span data-i18n-key="footerCopyright">
+          © Luisma Peramato · 2025
+        </span>
+        <a
+          class="ext-link"
+          href="https://github.com/PeramatoG"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-i18n-key="footerGithubLink"
+        >
           Ver repositorios en GitHub (PeramatoG)
         </a>
       </div>
     </div>
   </div>
+
+  <script>
+    // Simple translation dictionary
+    const translations = {
+      es: {
+        pageTitle: 'Luismaperamato.com – Herramientas para espectáculos',
+        languageLabel: 'Idioma',
+        languageSelectAria: 'Selector de idioma',
+        siteName: 'Luismaperamato.com',
+        subtitle: 'Iluminación, imagen y herramientas para espectáculos.',
+        status: 'La web está en construcción, pero ya puedes descargar algunos de mis programas.',
+        sectionSoftware: 'Software',
+        appPeramesaName: 'Peramesa',
+        appPeramesaPlatformsMac: 'macOS · Intel / Apple Silicon',
+        appPeramesaPlatformsWin: 'Windows · próximamente',
+        appPeramesaDescription:
+          'Aplicación para controlar mesas digitales Yamaha compatibles con el protocolo TF mediante cues, con soporte OSC y guardado/carga de shows en CSV.',
+        appPeramesaMeta: 'Versión actual: 3.0.0 · Proyecto abierto en GitHub.',
+        appPeramesaDownloadMacBtn: 'Descargar para macOS (GitHub)',
+        appPeramesaDownloadWinBtn: 'Instalador para Windows (próximamente)',
+        appPeramesaViewCodeBtn: 'Ver código en GitHub',
+        peramesaScreenshotAlt:
+          'Captura de Peramesa mostrando los faders y controles de cues',
+        footerCopyright: '© Luisma Peramato · 2025',
+        footerGithubLink: 'Ver repositorios en GitHub (PeramatoG)'
+      },
+      en: {
+        pageTitle: 'Luismaperamato.com – Tools for live shows',
+        languageLabel: 'Language',
+        languageSelectAria: 'Language selector',
+        siteName: 'Luismaperamato.com',
+        subtitle: 'Lighting, visuals and tools for live shows.',
+        status: 'This site is under construction, but you can already download some of my apps.',
+        sectionSoftware: 'Software',
+        appPeramesaName: 'Peramesa',
+        appPeramesaPlatformsMac: 'macOS · Intel / Apple Silicon',
+        appPeramesaPlatformsWin: 'Windows · coming soon',
+        appPeramesaDescription:
+          'App to control Yamaha digital consoles compatible with the TF protocol using cues, with OSC support and show save/load in CSV.',
+        appPeramesaMeta: 'Current version: 3.0.0 · Open project on GitHub.',
+        appPeramesaDownloadMacBtn: 'Download for macOS (GitHub)',
+        appPeramesaDownloadWinBtn: 'Windows installer (coming soon)',
+        appPeramesaViewCodeBtn: 'View code on GitHub',
+        peramesaScreenshotAlt:
+          'Screenshot of Peramesa showing faders and cue controls',
+        footerCopyright: '© Luisma Peramato · 2025',
+        footerGithubLink: 'View repositories on GitHub (PeramatoG)'
+      }
+    };
+
+    const LANGUAGE_STORAGE_KEY = 'preferredLanguage';
+
+    // Apply translations to all DOM elements
+    function applyTranslations(lang) {
+      const dict = translations[lang];
+      if (!dict) {
+        return;
+      }
+
+      // Update text nodes
+      const textElements = document.querySelectorAll('[data-i18n-key]');
+      textElements.forEach(function (elem) {
+        const key = elem.getAttribute('data-i18n-key');
+        const value = dict[key];
+        if (typeof value === 'string') {
+          elem.textContent = value;
+        }
+      });
+
+      // Update attributes (e.g. alt, aria-label)
+      const attrElements = document.querySelectorAll('[data-i18n-attr]');
+      attrElements.forEach(function (elem) {
+        const mappings = elem.getAttribute('data-i18n-attr').split(',');
+        mappings.forEach(function (mapping) {
+          const parts = mapping.split(':');
+          if (parts.length !== 2) {
+            return;
+          }
+          var attrName = parts[0].trim();
+          var key = parts[1].trim();
+          var value = dict[key];
+          if (typeof value === 'string') {
+            elem.setAttribute(attrName, value);
+          }
+        });
+      });
+
+      // Update document title and <html lang="...">
+      if (typeof dict.pageTitle === 'string') {
+        document.title = dict.pageTitle;
+      }
+      document.documentElement.lang = lang;
+    }
+
+    function getInitialLanguage() {
+      // Try stored preference first
+      var stored = null;
+      try {
+        stored = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
+      } catch (e) {
+        stored = null;
+      }
+
+      if (stored === 'es' || stored === 'en') {
+        return stored;
+      }
+
+      // Fallback to browser language
+      var browserLang = (navigator.language || navigator.userLanguage || 'es').toLowerCase();
+      if (browserLang.indexOf('es') === 0) {
+        return 'es';
+      }
+      return 'en';
+    }
+
+    (function initLanguage() {
+      var select = document.getElementById('language-switcher-select');
+      if (!select) {
+        return;
+      }
+
+      var initialLang = getInitialLanguage();
+      if (initialLang !== 'es' && initialLang !== 'en') {
+        initialLang = 'es';
+      }
+
+      select.value = initialLang;
+      applyTranslations(initialLang);
+
+      select.addEventListener('change', function (event) {
+        var lang = event.target.value;
+        if (lang !== 'es' && lang !== 'en') {
+          return;
+        }
+        applyTranslations(lang);
+        try {
+          window.localStorage.setItem(LANGUAGE_STORAGE_KEY, lang);
+        } catch (e) {
+          // Ignore storage errors
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
