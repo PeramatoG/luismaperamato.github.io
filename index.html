@@ -305,8 +305,8 @@
                 <span class="badge" data-i18n-key="appPeramesaPlatformsMac">
                   macOS · Intel / Apple Silicon
                 </span>
-                <span class="badge badge-soon" data-i18n-key="appPeramesaPlatformsWin">
-                  Windows · próximamente
+                <span class="badge" data-i18n-key="appPeramesaPlatformsWin">
+                  Windows
                 </span>
               </div>
             </div>
@@ -320,28 +320,30 @@
             <div class="app-actions">
               <a
                 class="btn btn-primary"
-                href="https://github.com/PeramatoG/Peramesa/releases/latest"
+                href="https://github.com/PeramatoG/Peramesa/releases/download/v3.0.0/Peramesa-3.0.0-Setup.exe"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n-key="appPeramesaDownloadWinBtn"
+              >
+                Descargar para Windows (.exe)
+              </a>
+              <a
+                class="btn btn-primary"
+                href="https://github.com/PeramatoG/Peramesa/releases/download/v3.0.0/Peramesa.dmg"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-i18n-key="appPeramesaDownloadMacBtn"
               >
-                Descargar para macOS (GitHub)
+                Descargar para macOS (.dmg)
               </a>
-              <span
-                class="btn btn-disabled"
-                aria-disabled="true"
-                data-i18n-key="appPeramesaDownloadWinBtn"
-              >
-                Instalador para Windows (próximamente)
-              </span>
               <a
                 class="btn"
-                href="https://github.com/PeramatoG/Peramesa"
+                href="https://github.com/PeramatoG/Peramesa/releases/tag/v3.0.0"
                 target="_blank"
                 rel="noopener noreferrer"
-                data-i18n-key="appPeramesaViewCodeBtn"
+                data-i18n-key="appPeramesaReleaseNotesBtn"
               >
-                Ver código en GitHub
+                Notas de instalación y más descargas (GitHub)
               </a>
             </div>
           </article>
@@ -429,13 +431,14 @@
         sectionGma3Plugins: 'Plugins para GrandMA3',
         appPeramesaName: 'Peramesa',
         appPeramesaPlatformsMac: 'macOS · Intel / Apple Silicon',
-        appPeramesaPlatformsWin: 'Windows · próximamente',
+        appPeramesaPlatformsWin: 'Windows',
         appPeramesaDescription:
           'Aplicación para controlar mesas digitales Yamaha compatibles con el protocolo TF mediante cues, con soporte OSC y guardado/carga de shows en CSV.',
         appPeramesaMeta: 'Versión actual: 3.0.0 · Proyecto abierto en GitHub.',
-        appPeramesaDownloadMacBtn: 'Descargar para macOS (GitHub)',
-        appPeramesaDownloadWinBtn: 'Instalador para Windows (próximamente)',
+        appPeramesaDownloadMacBtn: 'Descargar para macOS (.dmg)',
+        appPeramesaDownloadWinBtn: 'Descargar para Windows (.exe)',
         appPeramesaViewCodeBtn: 'Ver código en GitHub',
+        appPeramesaReleaseNotesBtn: 'Notas de instalación y más descargas (GitHub)',
         peramesaScreenshotAlt:
           'Captura de Peramesa mostrando los faders y controles de cues',
 
@@ -463,13 +466,14 @@
         sectionGma3Plugins: 'GrandMA3 plugins',
         appPeramesaName: 'Peramesa',
         appPeramesaPlatformsMac: 'macOS · Intel / Apple Silicon',
-        appPeramesaPlatformsWin: 'Windows · coming soon',
+        appPeramesaPlatformsWin: 'Windows',
         appPeramesaDescription:
           'App to control Yamaha digital consoles compatible with the TF protocol using cues, with OSC support and show save/load in CSV.',
         appPeramesaMeta: 'Current version: 3.0.0 · Open project on GitHub.',
-        appPeramesaDownloadMacBtn: 'Download for macOS (GitHub)',
-        appPeramesaDownloadWinBtn: 'Windows installer (coming soon)',
+        appPeramesaDownloadMacBtn: 'Download for macOS (.dmg)',
+        appPeramesaDownloadWinBtn: 'Download for Windows (.exe)',
         appPeramesaViewCodeBtn: 'View code on GitHub',
+        appPeramesaReleaseNotesBtn: 'Installation notes and more downloads (GitHub)',
         peramesaScreenshotAlt:
           'Screenshot of Peramesa showing faders and cue controls',
 
@@ -583,4 +587,3 @@
   </script>
 </body>
 </html>
-
