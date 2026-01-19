@@ -4,261 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luismaperamato.com – Herramientas para espectáculos</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #121212;
-      color: #e0e0e0;
-    }
-
-    .page {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem 1rem;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 900px;
-      padding: 2rem;
-      background-color: #1e1e1e;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-      border-radius: 12px;
-    }
-
-    header {
-      margin-bottom: 2rem;
-    }
-
-    .language-switcher {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 0.75rem;
-      font-size: 0.85rem;
-      color: #b0b0b0;
-    }
-
-    .language-switcher select {
-      background-color: #1a1a1a;
-      border: 1px solid #3a3a3a;
-      border-radius: 6px;
-      padding: 0.25rem 0.5rem;
-      color: #e0e0e0;
-      font-size: 0.85rem;
-    }
-
-    .language-switcher select:focus-visible {
-      outline: 2px solid #5b86ff;
-      outline-offset: 2px;
-    }
-
-    h1 {
-      font-size: 2.2rem;
-      margin: 0 0 0.5rem;
-      color: #ffffff;
-    }
-
-    .subtitle {
-      font-size: 1rem;
-      color: #b0b0b0;
-      margin: 0 0 0.75rem;
-    }
-
-    .status {
-      font-size: 0.95rem;
-      color: #888;
-      margin: 0 0 1.5rem;
-    }
-
-    h2 {
-      font-size: 1.4rem;
-      margin: 0 0 1rem;
-      color: #ffffff;
-    }
-
-    p {
-      font-size: 1rem;
-      color: #b0b0b0;
-      margin-bottom: 1rem;
-    }
-
-    .apps {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .app-card {
-      padding: 1.25rem 1.5rem;
-      border-radius: 10px;
-      background: #191919;
-      border: 1px solid #262626;
-    }
-
-    .app-media {
-      margin: 0 0 0.75rem;
-      border-radius: 10px;
-      overflow: hidden;
-      border: 1px solid #262626;
-      background: #111;
-    }
-
-    .app-media img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
-    .app-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 1rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .app-name {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: #ffffff;
-      margin: 0;
-    }
-
-    .app-platforms {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.35rem;
-      font-size: 0.8rem;
-    }
-
-    .badge {
-      padding: 0.15rem 0.5rem;
-      border-radius: 999px;
-      background: #252525;
-      border: 1px solid #333;
-      color: #d0d0d0;
-      white-space: nowrap;
-    }
-
-    .badge-soon {
-      border-style: dashed;
-      color: #aaaaaa;
-    }
-
-    .app-description {
-      font-size: 0.95rem;
-      color: #c4c4c4;
-      margin-bottom: 0.75rem;
-    }
-
-    .app-meta {
-      font-size: 0.85rem;
-      color: #8a8a8a;
-      margin-bottom: 0.75rem;
-    }
-
-    .app-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 0.55rem 0.9rem;
-      border-radius: 8px;
-      font-size: 0.95rem;
-      text-decoration: none;
-      border: 1px solid #2a2a2a;
-      background: #1a1a1a;
-      color: #e0e0e0;
-      transition: border-color 0.15s ease, background 0.15s ease, transform 0.03s ease;
-    }
-
-    .btn-primary {
-      border-color: #3f51ff;
-    }
-
-    .btn:hover {
-      border-color: #3a3a3a;
-      background: #161616;
-    }
-
-    .btn-primary:hover {
-      border-color: #5b6bff;
-      background: #181a30;
-    }
-
-    .btn:active {
-      transform: translateY(1px);
-    }
-
-    .btn:focus-visible {
-      outline: 2px solid #5b86ff;
-      outline-offset: 3px;
-    }
-
-    .btn-disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
-
-    .ext-link {
-      display: inline-block;
-      padding: 0.55rem 0.9rem;
-      border: 1px solid #2a2a2a;
-      border-radius: 8px;
-      color: #e0e0e0;
-      text-decoration: none;
-      background: #1a1a1a;
-      transition: border-color 0.15s ease, background 0.15s ease, transform 0.03s ease;
-      font-size: 0.9rem;
-    }
-
-    .ext-link:hover {
-      border-color: #3a3a3a;
-      background: #161616;
-    }
-
-    .ext-link:active {
-      transform: translateY(1px);
-    }
-
-    .ext-link:focus-visible {
-      outline: 2px solid #5b86ff;
-      outline-offset: 3px;
-    }
-
-    .footer {
-      margin-top: 2rem;
-      font-size: 0.85rem;
-      color: #555;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      align-items: center;
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        padding: 1.5rem;
-      }
-      .app-header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
   <div class="page">
@@ -288,175 +34,31 @@
       </header>
 
       <section>
-        <h2 data-i18n-key="sectionSoftware">Software</h2>
-        <div class="apps">
-          <article class="app-card">
-            <div class="app-media">
-              <img
-                src="assets/peramesa_screenshot.png"
-                alt="Captura de Peramesa mostrando los faders y controles de cues"
-                loading="lazy"
-                data-i18n-attr="alt:peramesaScreenshotAlt"
-              >
-            </div>
-            <div class="app-header">
-              <h3 class="app-name" data-i18n-key="appPeramesaName">Peramesa</h3>
-              <div class="app-platforms">
-                <span class="badge" data-i18n-key="appPeramesaPlatformsMac">
-                  macOS · Intel / Apple Silicon
-                </span>
-                <span class="badge" data-i18n-key="appPeramesaPlatformsWin">
-                  Windows
-                </span>
-              </div>
-            </div>
-            <p class="app-description" data-i18n-key="appPeramesaDescription">
-              Aplicación para controlar mesas digitales Yamaha compatibles con el protocolo TF
-              mediante cues, con soporte OSC y guardado/carga de shows en CSV.
+        <h2 data-i18n-key="sectionGroups">Categorías</h2>
+        <div class="group-list">
+          <article class="group-card">
+            <h3 data-i18n-key="groupSoftwareTitle">Software</h3>
+            <p data-i18n-key="groupSoftwareSummary">
+              Aplicaciones de control y utilidades para espectáculos en directo.
             </p>
-            <p class="app-meta" data-i18n-key="appPeramesaMeta">
-              Versión actual: 3.0.0 · Proyecto abierto en GitHub.
-            </p>
-            <div class="app-actions">
-              <a
-                class="btn btn-primary"
-                href="https://github.com/PeramatoG/Peramesa/releases/download/v3.0.0/Peramesa-3.0.0-Setup.exe"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-i18n-key="appPeramesaDownloadWinBtn"
-              >
-                Descargar para Windows (.exe)
-              </a>
-              <a
-                class="btn btn-primary"
-                href="https://github.com/PeramatoG/Peramesa/releases/download/v3.0.0/Peramesa.dmg"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-i18n-key="appPeramesaDownloadMacBtn"
-              >
-                Descargar para macOS (.dmg)
-              </a>
-              <a
-                class="btn"
-                href="https://github.com/PeramatoG/Peramesa/releases/tag/v3.0.0"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-i18n-key="appPeramesaReleaseNotesBtn"
-              >
-                Notas de instalación y más descargas (GitHub)
-              </a>
-            </div>
+            <a class="btn btn-primary" href="apps/software.html" data-i18n-key="groupSoftwareLink">
+              Ver aplicaciones
+            </a>
           </article>
-        </div>
-      </section>
-
-      <!-- Nueva sección: Plugins para GrandMA3 -->
-      <section>
-        <h2 data-i18n-key="sectionGma3Plugins">Plugins para GrandMA3</h2>
-        <div class="apps">
-		          <article class="app-card">
-            <div class="app-media">
-              <img
-                src="assets/peramato_palgen.png"
-                alt="Ventana del plugin Palgen en GrandMA3 mostrando los controles de color y la interfaz principal"
-                loading="lazy"
-                data-i18n-attr="alt:palgenMainScreenshotAlt"
-              >
-              <img
-                src="assets/macros_palgen.png"
-                alt="Vista de los macros generados por Palgen en GrandMA3"
-                loading="lazy"
-                data-i18n-attr="alt:palgenMacrosScreenshotAlt"
-              >
-            </div>
-            <div class="app-header">
-              <h3 class="app-name" data-i18n-key="pluginPalgenName">
-                Palgen – Color Palette Generator para GrandMA3
-              </h3>
-              <div class="app-platforms">
-                <span class="badge">GrandMA3</span>
-              </div>
-            </div>
-            <p class="app-description" data-i18n-key="pluginPalgenDescription">
-              Plugin para GrandMA3 que genera paletas de color para rangos de grupos usando diferentes modos de armonía de color (análoga, complementaria, tríada, etc.).
-              Incluye una ventana propia con faders y campos numéricos para configurar HUE, saturación, aleatoriedad y rango de grupos.
+          <article class="group-card">
+            <h3 data-i18n-key="groupPluginsTitle">Plugins para GrandMA3</h3>
+            <p data-i18n-key="groupPluginsSummary">
+              Plugins y utilidades para crear paletas de color y presets más rápido.
             </p>
-            <p class="app-meta" data-i18n-key="pluginPalgenMeta">
-              Versión actual: 1.0.0 · Proyecto abierto en GitHub.
-            </p>
-            <div class="app-actions">
-              <a
-                class="btn"
-                href="https://github.com/PeramatoG/Palgen-GMA3"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-i18n-key="pluginPalgenGithubBtn"
-              >
-                Ver plugin en GitHub
-              </a>
-              <a
-                class="btn"
-                href="https://github.com/PeramatoG/Palgen-GMA3/releases/tag/v1.0.0"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-i18n-key="pluginPalgenReleaseBtn"
-              >
-                Ir al release v1.0.0 (Palgen.zip)
-              </a>
-            </div>
+            <a class="btn btn-primary" href="apps/plugins-gma3.html" data-i18n-key="groupPluginsLink">
+              Ver plugins
+            </a>
           </article>
-	
-          <article class="app-card">
-            <div class="app-media">
-              <img
-                src="assets/color_screenshot.png"
-                alt="Vista de los presets de color en GrandMA3 con la tabla de colores HTML"
-                loading="lazy"
-                data-i18n-attr="alt:labelColorsMainScreenshotAlt"
-              >
-              <img
-                src="assets/label_colors.png"
-                alt="Ventana del plugin Label Colors en GrandMA3 con las opciones de renombrado"
-                loading="lazy"
-                data-i18n-attr="alt:labelColorsDialogScreenshotAlt"
-              >
-            </div>
-            <div class="app-header">
-              <h3 class="app-name" data-i18n-key="pluginLabelColorsName">
-                Label Colors – HTML colors para GrandMA3
-              </h3>
-              <div class="app-platforms">
-                <span class="badge">GrandMA3</span>
-              </div>
-            </div>
-            <p class="app-description" data-i18n-key="pluginLabelColorsDescription">
-              Plugin para GrandMA3 que rellena y renombra presets de color usando nombres
-              estándar de colores HTML. Útil para crear una paleta de color coherente para
-              los botones de cues y presets.
-            </p>
-            <p class="app-meta" data-i18n-key="pluginLabelColorsMeta">
-              Proyecto abierto en GitHub.
-            </p>
-            <div class="app-actions">
-              <a
-                class="btn"
-                href="https://github.com/PeramatoG/Label-Colors-GMA3"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-i18n-key="pluginLabelColorsGithubBtn"
-              >
-                Ver plugin en GitHub
-              </a>
-            </div>
-          </article>
-
         </div>
       </section>
 
       <div class="footer">
-        <span data-i18n-key="footerCopyright">
-          © Luisma Peramato · 2025
-        </span>
+        <span data-i18n-key="footerCopyright">© Luisma Peramato · 2025</span>
         <a
           class="ext-link"
           href="https://github.com/PeramatoG"
@@ -471,7 +73,6 @@
   </div>
 
   <script>
-    // Simple translation dictionary
     const translations = {
       es: {
         pageTitle: 'Luismaperamato.com – Herramientas para espectáculos',
@@ -480,42 +81,13 @@
         siteName: 'Luismaperamato.com',
         subtitle: 'Iluminación, imagen y herramientas para espectáculos.',
         status: 'La web está en construcción, pero ya puedes descargar algunos de mis programas.',
-        sectionSoftware: 'Software',
-        sectionGma3Plugins: 'Plugins para GrandMA3',
-        appPeramesaName: 'Peramesa',
-        appPeramesaPlatformsMac: 'macOS · Intel / Apple Silicon',
-        appPeramesaPlatformsWin: 'Windows',
-        appPeramesaDescription:
-          'Aplicación para controlar mesas digitales Yamaha compatibles con el protocolo TF mediante cues, con soporte OSC y guardado/carga de shows en CSV.',
-        appPeramesaMeta: 'Versión actual: 3.0.0 · Proyecto abierto en GitHub.',
-        appPeramesaDownloadMacBtn: 'Descargar para macOS (.dmg)',
-        appPeramesaDownloadWinBtn: 'Descargar para Windows (.exe)',
-        appPeramesaViewCodeBtn: 'Ver código en GitHub',
-        appPeramesaReleaseNotesBtn: 'Notas de instalación y más descargas (GitHub)',
-        peramesaScreenshotAlt:
-          'Captura de Peramesa mostrando los faders y controles de cues',
-
-        pluginLabelColorsName: 'Label Colors – HTML colors para GrandMA3',
-        pluginLabelColorsDescription:
-          'Plugin para GrandMA3 que rellena y renombra presets de color usando nombres estándar de colores HTML. Útil para crear una paleta de color coherente para los botones de cues y presets.',
-        pluginLabelColorsMeta: 'Proyecto abierto en GitHub.',
-        pluginLabelColorsGithubBtn: 'Ver plugin en GitHub',
-        labelColorsMainScreenshotAlt:
-          'Vista de los presets de color en GrandMA3 con la tabla de colores HTML',
-        labelColorsDialogScreenshotAlt:
-          'Ventana del plugin Label Colors en GrandMA3 con las opciones de renombrado',
-
-        pluginPalgenName: 'Palgen – Generador de paletas de color para GrandMA3',
-        pluginPalgenDescription:
-          'Plugin para GrandMA3 que genera paletas de color para rangos de grupos usando diferentes modos de armonía de color (análoga, complementaria, tríada, etc.). Incluye una ventana propia con faders y campos numéricos para configurar HUE, saturación, aleatoriedad y rango de grupos.',
-        pluginPalgenMeta: 'Versión actual: 1.0.0 · Proyecto abierto en GitHub.',
-        pluginPalgenGithubBtn: 'Ver plugin en GitHub',
-        pluginPalgenReleaseBtn: 'Ir al release v1.0.0 (Palgen.zip)',
-        palgenMainScreenshotAlt:
-          'Ventana del plugin Palgen en GrandMA3 mostrando los controles de color y la interfaz principal',
-        palgenMacrosScreenshotAlt:
-          'Vista de los macros generados por Palgen en GrandMA3',
-
+        sectionGroups: 'Categorías',
+        groupSoftwareTitle: 'Software',
+        groupSoftwareSummary: 'Aplicaciones de control y utilidades para espectáculos en directo.',
+        groupSoftwareLink: 'Ver aplicaciones',
+        groupPluginsTitle: 'Plugins para GrandMA3',
+        groupPluginsSummary: 'Plugins y utilidades para crear paletas de color y presets más rápido.',
+        groupPluginsLink: 'Ver plugins',
         footerCopyright: '© Luisma Peramato · 2025',
         footerGithubLink: 'Ver repositorios en GitHub (PeramatoG)'
       },
@@ -526,42 +98,13 @@
         siteName: 'Luismaperamato.com',
         subtitle: 'Lighting, visuals and tools for live shows.',
         status: 'This site is under construction, but you can already download some of my apps.',
-        sectionSoftware: 'Software',
-        sectionGma3Plugins: 'GrandMA3 plugins',
-        appPeramesaName: 'Peramesa',
-        appPeramesaPlatformsMac: 'macOS · Intel / Apple Silicon',
-        appPeramesaPlatformsWin: 'Windows',
-        appPeramesaDescription:
-          'App to control Yamaha digital consoles compatible with the TF protocol using cues, with OSC support and show save/load in CSV.',
-        appPeramesaMeta: 'Current version: 3.0.0 · Open project on GitHub.',
-        appPeramesaDownloadMacBtn: 'Download for macOS (.dmg)',
-        appPeramesaDownloadWinBtn: 'Download for Windows (.exe)',
-        appPeramesaViewCodeBtn: 'View code on GitHub',
-        appPeramesaReleaseNotesBtn: 'Installation notes and more downloads (GitHub)',
-        peramesaScreenshotAlt:
-          'Screenshot of Peramesa showing faders and cue controls',
-
-        pluginLabelColorsName: 'Label Colors – HTML colors for GrandMA3',
-        pluginLabelColorsDescription:
-          'GrandMA3 plugin that fills and renames color presets using standard HTML color names. Useful to build a consistent color palette for your cues and presets.',
-        pluginLabelColorsMeta: 'Open project on GitHub.',
-        pluginLabelColorsGithubBtn: 'View plugin on GitHub',
-        labelColorsMainScreenshotAlt:
-          'View of color presets in GrandMA3 using the HTML color table',
-        labelColorsDialogScreenshotAlt:
-          'Label Colors plugin dialog in GrandMA3 with rename options',
-
-        pluginPalgenName: 'Palgen – Color Palette Generator for GrandMA3',
-        pluginPalgenDescription:
-          'GrandMA3 plugin that generates color palettes for group ranges using classic color harmony schemes (analogous, complementary, triad, etc.). It provides a custom UI window with faders and numeric fields to set HUE, saturation, randomness and group range.',
-        pluginPalgenMeta: 'Current version: 1.0.0 · Open project on GitHub.',
-        pluginPalgenGithubBtn: 'View plugin on GitHub',
-        pluginPalgenReleaseBtn: 'Go to release v1.0.0 (Palgen.zip)',
-        palgenMainScreenshotAlt:
-          'Palgen plugin window in GrandMA3 showing color controls and main UI',
-        palgenMacrosScreenshotAlt:
-          'View of macros generated by Palgen in GrandMA3',
-
+        sectionGroups: 'Categories',
+        groupSoftwareTitle: 'Software',
+        groupSoftwareSummary: 'Control apps and utilities for live shows.',
+        groupSoftwareLink: 'View apps',
+        groupPluginsTitle: 'GrandMA3 plugins',
+        groupPluginsSummary: 'Plugins and utilities to create color palettes and presets faster.',
+        groupPluginsLink: 'View plugins',
         footerCopyright: '© Luisma Peramato · 2025',
         footerGithubLink: 'View repositories on GitHub (PeramatoG)'
       }
@@ -569,14 +112,12 @@
 
     const LANGUAGE_STORAGE_KEY = 'preferredLanguage';
 
-    // Apply translations to all DOM elements
     function applyTranslations(lang) {
       const dict = translations[lang];
       if (!dict) {
         return;
       }
 
-      // Update text nodes
       const textElements = document.querySelectorAll('[data-i18n-key]');
       textElements.forEach(function (elem) {
         const key = elem.getAttribute('data-i18n-key');
@@ -586,7 +127,6 @@
         }
       });
 
-      // Update attributes (e.g. alt, aria-label)
       const attrElements = document.querySelectorAll('[data-i18n-attr]');
       attrElements.forEach(function (elem) {
         const mappings = elem.getAttribute('data-i18n-attr').split(',');
@@ -604,7 +144,6 @@
         });
       });
 
-      // Update document title and <html lang="...">
       if (typeof dict.pageTitle === 'string') {
         document.title = dict.pageTitle;
       }
@@ -612,7 +151,6 @@
     }
 
     function getInitialLanguage() {
-      // Try stored preference first
       var stored = null;
       try {
         stored = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
@@ -624,7 +162,6 @@
         return stored;
       }
 
-      // Fallback to browser language
       var browserLang = (navigator.language || navigator.userLanguage || 'es').toLowerCase();
       if (browserLang.indexOf('es') === 0) {
         return 'es';
