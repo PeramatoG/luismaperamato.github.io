@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luismaperamato.com – Plugins GrandMA3</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="container">
+      <header>
+        <div class="language-switcher">
+          <label for="language-switcher-select" class="language-label" data-i18n-key="languageLabel">
+            Idioma
+          </label>
+          <select
+            id="language-switcher-select"
+            aria-label="Selector de idioma"
+            data-i18n-attr="aria-label:languageSelectAria"
+          >
+            <option value="es">ES</option>
+            <option value="en">EN</option>
+          </select>
+        </div>
+
+        <a class="ext-link nav-back" href="../index.html" data-i18n-key="backToHome">
+          ← Volver al inicio
+        </a>
+
+        <h1 data-i18n-key="pageTitle">Plugins para GrandMA3</h1>
+        <p class="subtitle" data-i18n-key="pageSubtitle">
+          Herramientas para mejorar la programación de color y presets.
+        </p>
+      </header>
+
+      <section>
+        <div class="apps">
+          <article class="app-card">
+            <div class="app-media">
+              <img
+                src="../assets/peramato_palgen.png"
+                alt="Ventana del plugin Palgen en GrandMA3 mostrando los controles de color y la interfaz principal"
+                loading="lazy"
+                data-i18n-attr="alt:palgenMainScreenshotAlt"
+              />
+              <img
+                src="../assets/macros_palgen.png"
+                alt="Vista de los macros generados por Palgen en GrandMA3"
+                loading="lazy"
+                data-i18n-attr="alt:palgenMacrosScreenshotAlt"
+              />
+            </div>
+            <div class="app-header">
+              <h3 class="app-name" data-i18n-key="pluginPalgenName">
+                Palgen – Color Palette Generator para GrandMA3
+              </h3>
+              <div class="app-platforms">
+                <span class="badge">GrandMA3</span>
+              </div>
+            </div>
+            <p class="app-description" data-i18n-key="pluginPalgenDescription">
+              Plugin para GrandMA3 que genera paletas de color para rangos de grupos usando diferentes modos de armonía de color (análoga, complementaria, tríada, etc.).
+              Incluye una ventana propia con faders y campos numéricos para configurar HUE, saturación, aleatoriedad y rango de grupos.
+            </p>
+            <p class="app-meta" data-i18n-key="pluginPalgenMeta">
+              Versión actual: 1.0.0 · Proyecto abierto en GitHub.
+            </p>
+            <div class="app-actions">
+              <a
+                class="btn"
+                href="https://github.com/PeramatoG/Palgen-GMA3"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n-key="pluginPalgenGithubBtn"
+              >
+                Ver plugin en GitHub
+              </a>
+              <a
+                class="btn"
+                href="https://github.com/PeramatoG/Palgen-GMA3/releases/tag/v1.0.0"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n-key="pluginPalgenReleaseBtn"
+              >
+                Ir al release v1.0.0 (Palgen.zip)
+              </a>
+            </div>
+          </article>
+
+          <article class="app-card">
+            <div class="app-media">
+              <img
+                src="../assets/color_screenshot.png"
+                alt="Vista de los presets de color en GrandMA3 con la tabla de colores HTML"
+                loading="lazy"
+                data-i18n-attr="alt:labelColorsMainScreenshotAlt"
+              />
+              <img
+                src="../assets/label_colors.png"
+                alt="Ventana del plugin Label Colors en GrandMA3 con las opciones de renombrado"
+                loading="lazy"
+                data-i18n-attr="alt:labelColorsDialogScreenshotAlt"
+              />
+            </div>
+            <div class="app-header">
+              <h3 class="app-name" data-i18n-key="pluginLabelColorsName">
+                Label Colors – HTML colors para GrandMA3
+              </h3>
+              <div class="app-platforms">
+                <span class="badge">GrandMA3</span>
+              </div>
+            </div>
+            <p class="app-description" data-i18n-key="pluginLabelColorsDescription">
+              Plugin para GrandMA3 que rellena y renombra presets de color usando nombres
+              estándar de colores HTML. Útil para crear una paleta de color coherente para
+              los botones de cues y presets.
+            </p>
+            <p class="app-meta" data-i18n-key="pluginLabelColorsMeta">
+              Proyecto abierto en GitHub.
+            </p>
+            <div class="app-actions">
+              <a
+                class="btn"
+                href="https://github.com/PeramatoG/Label-Colors-GMA3"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n-key="pluginLabelColorsGithubBtn"
+              >
+                Ver plugin en GitHub
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <div class="footer">
+        <span data-i18n-key="footerCopyright">© Luisma Peramato · 2025</span>
+        <a
+          class="ext-link"
+          href="https://github.com/PeramatoG"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-i18n-key="footerGithubLink"
+        >
+          Ver repositorios en GitHub (PeramatoG)
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const translations = {
+      es: {
+        pageTitle: 'Plugins para GrandMA3',
+        pageSubtitle: 'Herramientas para mejorar la programación de color y presets.',
+        languageLabel: 'Idioma',
+        languageSelectAria: 'Selector de idioma',
+        backToHome: '← Volver al inicio',
+        pluginLabelColorsName: 'Label Colors – HTML colors para GrandMA3',
+        pluginLabelColorsDescription:
+          'Plugin para GrandMA3 que rellena y renombra presets de color usando nombres estándar de colores HTML. Útil para crear una paleta de color coherente para los botones de cues y presets.',
+        pluginLabelColorsMeta: 'Proyecto abierto en GitHub.',
+        pluginLabelColorsGithubBtn: 'Ver plugin en GitHub',
+        labelColorsMainScreenshotAlt:
+          'Vista de los presets de color en GrandMA3 con la tabla de colores HTML',
+        labelColorsDialogScreenshotAlt:
+          'Ventana del plugin Label Colors en GrandMA3 con las opciones de renombrado',
+        pluginPalgenName: 'Palgen – Generador de paletas de color para GrandMA3',
+        pluginPalgenDescription:
+          'Plugin para GrandMA3 que genera paletas de color para rangos de grupos usando diferentes modos de armonía de color (análoga, complementaria, tríada, etc.). Incluye una ventana propia con faders y campos numéricos para configurar HUE, saturación, aleatoriedad y rango de grupos.',
+        pluginPalgenMeta: 'Versión actual: 1.0.0 · Proyecto abierto en GitHub.',
+        pluginPalgenGithubBtn: 'Ver plugin en GitHub',
+        pluginPalgenReleaseBtn: 'Ir al release v1.0.0 (Palgen.zip)',
+        palgenMainScreenshotAlt:
+          'Ventana del plugin Palgen en GrandMA3 mostrando los controles de color y la interfaz principal',
+        palgenMacrosScreenshotAlt:
+          'Vista de los macros generados por Palgen en GrandMA3',
+        footerCopyright: '© Luisma Peramato · 2025',
+        footerGithubLink: 'Ver repositorios en GitHub (PeramatoG)'
+      },
+      en: {
+        pageTitle: 'GrandMA3 plugins',
+        pageSubtitle: 'Tools to improve color programming and presets.',
+        languageLabel: 'Language',
+        languageSelectAria: 'Language selector',
+        backToHome: '← Back to home',
+        pluginLabelColorsName: 'Label Colors – HTML colors for GrandMA3',
+        pluginLabelColorsDescription:
+          'GrandMA3 plugin that fills and renames color presets using standard HTML color names. Useful to build a consistent color palette for your cues and presets.',
+        pluginLabelColorsMeta: 'Open project on GitHub.',
+        pluginLabelColorsGithubBtn: 'View plugin on GitHub',
+        labelColorsMainScreenshotAlt:
+          'View of color presets in GrandMA3 using the HTML color table',
+        labelColorsDialogScreenshotAlt:
+          'Label Colors plugin dialog in GrandMA3 with rename options',
+        pluginPalgenName: 'Palgen – Color Palette Generator for GrandMA3',
+        pluginPalgenDescription:
+          'GrandMA3 plugin that generates color palettes for group ranges using classic color harmony schemes (analogous, complementary, triad, etc.). It provides a custom UI window with faders and numeric fields to set HUE, saturation, randomness and group range.',
+        pluginPalgenMeta: 'Current version: 1.0.0 · Open project on GitHub.',
+        pluginPalgenGithubBtn: 'View plugin on GitHub',
+        pluginPalgenReleaseBtn: 'Go to release v1.0.0 (Palgen.zip)',
+        palgenMainScreenshotAlt:
+          'Palgen plugin window in GrandMA3 showing color controls and main UI',
+        palgenMacrosScreenshotAlt:
+          'View of macros generated by Palgen in GrandMA3',
+        footerCopyright: '© Luisma Peramato · 2025',
+        footerGithubLink: 'View repositories on GitHub (PeramatoG)'
+      }
+    };
+
+    const LANGUAGE_STORAGE_KEY = 'preferredLanguage';
+
+    function applyTranslations(lang) {
+      const dict = translations[lang];
+      if (!dict) {
+        return;
+      }
+
+      const textElements = document.querySelectorAll('[data-i18n-key]');
+      textElements.forEach(function (elem) {
+        const key = elem.getAttribute('data-i18n-key');
+        const value = dict[key];
+        if (typeof value === 'string') {
+          elem.textContent = value;
+        }
+      });
+
+      const attrElements = document.querySelectorAll('[data-i18n-attr]');
+      attrElements.forEach(function (elem) {
+        const mappings = elem.getAttribute('data-i18n-attr').split(',');
+        mappings.forEach(function (mapping) {
+          const parts = mapping.split(':');
+          if (parts.length !== 2) {
+            return;
+          }
+          var attrName = parts[0].trim();
+          var key = parts[1].trim();
+          var value = dict[key];
+          if (typeof value === 'string') {
+            elem.setAttribute(attrName, value);
+          }
+        });
+      });
+
+      if (typeof dict.pageTitle === 'string') {
+        document.title = `Luismaperamato.com – ${dict.pageTitle}`;
+      }
+      document.documentElement.lang = lang;
+    }
+
+    function getInitialLanguage() {
+      var stored = null;
+      try {
+        stored = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
+      } catch (e) {
+        stored = null;
+      }
+
+      if (stored === 'es' || stored === 'en') {
+        return stored;
+      }
+
+      var browserLang = (navigator.language || navigator.userLanguage || 'es').toLowerCase();
+      if (browserLang.indexOf('es') === 0) {
+        return 'es';
+      }
+      return 'en';
+    }
+
+    (function initLanguage() {
+      var select = document.getElementById('language-switcher-select');
+      if (!select) {
+        return;
+      }
+
+      var initialLang = getInitialLanguage();
+      if (initialLang !== 'es' && initialLang !== 'en') {
+        initialLang = 'es';
+      }
+
+      select.value = initialLang;
+      applyTranslations(initialLang);
+
+      select.addEventListener('change', function (event) {
+        var lang = event.target.value;
+        if (lang !== 'es' && lang !== 'en') {
+          return;
+        }
+        applyTranslations(lang);
+        try {
+          window.localStorage.setItem(LANGUAGE_STORAGE_KEY, lang);
+        } catch (e) {
+          // Ignore storage errors
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
